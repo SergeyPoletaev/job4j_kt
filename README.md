@@ -1,4 +1,5 @@
-[![build](https://github.com/SergeyPoletaev/job4j_kt/workflows/build/badge.svg)](https://github.com/SergeyPoletaev/job4j_kt/actions)
+[![Java CI with Gradle](https://github.com/SergeyPoletaev/job4j_kt/actions/workflows/gradle.yml/badge.svg)](https://github.com/SergeyPoletaev/job4j_kt/actions/workflows/gradle.yml)
+
 # job4j_kt
 
 ### Описание проекта:
