@@ -17,18 +17,9 @@ class Calc {
         return first * second
     }
 
-    fun main(args: Array<String>) {
-        val first = 2
-        val second = 3
+    fun max(first: Int, second: Int) = if (first > second) first else second
 
-        val plus = sum(first, second)
-        val minus = subtraction(first, second)
-        val div = division(first, second)
-        val multi = multiply(first, second)
+    fun max(first: Int, second: Int, third: Int): Int =
+        if (first > second && first > third) first else if (third > second) third else second
 
-        println("$first + $second = $plus")
-        println("$first - $second = $minus")
-        println("$first / $second = $div")
-        println("$first * $second = $multi")
-    }
 }
