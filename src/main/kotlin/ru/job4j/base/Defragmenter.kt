@@ -6,9 +6,7 @@ class Defragmenter {
         val newArray = arrayOfNulls<String>(array.size)
         var index = 0
         for (str in array) {
-            if (str != null) {
-                newArray[index++] = str
-            }
+            str?.let { newArray[index++] = str }
         }
         return newArray
     }
