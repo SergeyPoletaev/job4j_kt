@@ -12,34 +12,34 @@ class CalcTest {
 
     @Test
     fun when2plus3then5() {
-        assertThat(Calc().sum(2, 3)).isEqualTo(5)
+        assertThat(sum(2, 3)).isEqualTo(5)
     }
 
     @Test
     fun when4minus3then1() {
-        assertThat(Calc().subtraction(4, 3)).isEqualTo(1)
+        assertThat(subtraction(4, 3)).isEqualTo(1)
     }
 
     @Test
     fun when2multiply3then6() {
-        assertThat(Calc().multiply(2, 3)).isEqualTo(6)
+        assertThat(multiply(2, 3)).isEqualTo(6)
     }
 
     @Test
     fun when2division3() {
-        assertThat(Calc().division(2, 3)).isEqualTo(0.66, offset(0.01))
+        assertThat(division(2, 3)).isEqualTo(0.66, offset(0.01))
     }
 
     @ParameterizedTest
     @MethodSource("providerNumbersCombinationTwoArgs")
     fun whenMaxFromTwoArgs(first: Int, second: Int) {
-        assertThat(Calc().max(first, second)).isEqualTo(2)
+        assertThat(max(first, second)).isEqualTo(2)
     }
 
     @ParameterizedTest
     @MethodSource("providerNumbersCombinationThreeArgs")
     fun whenMaxFromThreeArgs(first: Int, second: Int, thrid: Int) {
-        assertThat(Calc().max(first, second, thrid)).isEqualTo(3)
+        assertThat(max(first, second, thrid)).isEqualTo(3)
     }
 
     companion object {
