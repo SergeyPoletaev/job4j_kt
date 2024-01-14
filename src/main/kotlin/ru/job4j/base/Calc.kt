@@ -20,6 +20,6 @@ class Calc {
     fun max(first: Int, second: Int) = if (first > second) first else second
 
     fun max(first: Int, second: Int, third: Int): Int =
-        if (first > second && first > third) first else if (third > second) third else second
+        if (first > second && first > third) first else max(third, second)
 
 }
