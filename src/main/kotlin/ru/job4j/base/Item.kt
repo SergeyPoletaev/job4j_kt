@@ -6,9 +6,9 @@ import java.time.format.DateTimeFormatter
 class Item {
     private val formatter = DateTimeFormatter.ofPattern("dd-MMMM-EEEE-yyyy HH:mm:ss")
 
-    private var id: Int = 0
+    private var id = 0
     private var name: String? = null
-    private var created: LocalDateTime = LocalDateTime.now()
+    private var created = LocalDateTime.now()
 
     constructor()
 
