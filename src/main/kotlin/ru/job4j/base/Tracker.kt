@@ -5,7 +5,7 @@ class Tracker {
     private var ids = 1
 
     fun add(item: Item): Item {
-        item.setId(ids++)
+        item.id = ids++
         items.add(item)
         return item
     }
@@ -15,7 +15,7 @@ class Tracker {
     fun findByName(name: String): List<Item> {
         val rsl = ArrayList<Item>()
         for (item in items) {
-            if (name == item.getName()) {
+            if (name == item.name) {
                 rsl.add(item)
             }
         }
@@ -40,7 +40,7 @@ class Tracker {
         val index = indexOf(id)
         val rsl = index != -1
         if (rsl) {
-            item.setId(id);
+            item.id = id
             items[index] = item
         }
         return rsl
@@ -49,9 +49,9 @@ class Tracker {
     private fun indexOf(id: Int): Int {
         var rsl = -1
         for ((index) in items.withIndex()) {
-            if (id == items[index].getId()) {
-                rsl = index;
-                break;
+            if (id == items[index].id) {
+                rsl = index
+                break
             }
         }
         return rsl
