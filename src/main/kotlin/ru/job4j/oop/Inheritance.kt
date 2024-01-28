@@ -1,16 +1,41 @@
 package ru.job4j.oop
 
-open class Teacher(val name: String)
+open class Teacher(private val name: String) {
 
-open class LanguageTeacher(val languageTrainer: String, name: String) : Teacher(name)
+    open fun getName() = name
+
+    open fun action() = println("Чему-то учит")
+}
+
+open class LanguageTeacher(val languageTrainer: String, name: String) : Teacher(name) {
+
+    override fun getName(): String = super.getName() + "--" + "LanguageTeacher"
+
+    override fun action() = println("Учит языкам")
+}
 
 class EnglishTeacher(val certificate: String, name: String, languageTrainer: String) :
-    LanguageTeacher(languageTrainer, name)
+    LanguageTeacher(languageTrainer, name) {
+
+    override fun getName(): String = super.getName() + "--" + "EnglishTeacher"
+
+    override fun action() = println("Учит английскому языку")
+}
 
 class RussianTeacher(val diploma: String, languageTrainer: String, name: String) :
-    LanguageTeacher(languageTrainer, name)
+    LanguageTeacher(languageTrainer, name) {
 
-class ChemicalTeacher(val lab: String, name: String) : Teacher(name)
+    override fun getName(): String = super.getName() + "--" + "RussianTeacher"
+
+    override fun action() = println("Учит русскому языку")
+}
+
+class ChemicalTeacher(val lab: String, name: String) : Teacher(name) {
+
+    override fun getName(): String = super.getName() + "--" + "ChemicalTeacher"
+
+    override fun action() = println("Учит химии")
+}
 
 
 fun main() {
